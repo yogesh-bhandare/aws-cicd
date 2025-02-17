@@ -8,7 +8,7 @@ export class CicdInfraStack extends cdk.Stack {
     super(scope, id, props);
 
     const lambdaFunction = new lambda.Function(this, "LambdaFunction", {
-      runtime: lambda.Runtime.PYTHON_3_9,
+      runtime: lambda.Runtime.PYTHON_3_12,
       code: lambda.Code.fromAsset("lambda"),
       handler: "main.handler",
     });
